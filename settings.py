@@ -14,12 +14,42 @@ SESSION_CONFIG_DEFAULTS = {
 SESSION_CONFIGS = [
     {
         'name': 'social_norms',
-        'display_name': 'Social Norms Experiment',
+        'display_name': 'Old Social Norms Experiment',
         'num_demo_participants': 6,
         'app_sequence': ['social_norms'],
         'treatment': 'public',  # choose either "public" or "private"
         'advice': 'C'  # choose one of the options in the table.
     },
+    {
+        'name': 'sn_advisors',
+        'display_name': "SN - Advisors",
+        'num_demo_participants': 2,
+        'app_sequence': ['sn_advisors'],
+    },
+    {
+        'name': 'sn_intro',
+        'display_name': "SN - Intro",
+        'num_demo_participants': 2,
+        'app_sequence': ['sn_intro'],
+    },
+    {
+        'name': 'sn_decisions',
+        'display_name': "SN - Decisions",
+        'num_demo_participants': 4,
+        'app_sequence': ['sn_decisions'],
+    },
+    {
+        'name': 'sn_results',
+        'display_name': "SN - Results",
+        'num_demo_participants': 4,
+        'app_sequence': ['sn_results'],
+    },
+    {
+        'name': 'sn_outro',
+        'display_name': "SN - Survey",
+        'num_demo_participants': 2,
+        'app_sequence': ['sn_outro'],
+    }
 ]
 
 

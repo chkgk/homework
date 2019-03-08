@@ -11,3 +11,4 @@
 - think about timeouts
 - move to matching by arrival time to be independent of number of people in the room.
   - this would also automatically handle uneven participant numbers
+
