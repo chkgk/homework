@@ -1,8 +1,7 @@
 from otree.api import Currency as c, currency_range
 from ._builtin import Page, WaitPage
 from .models import Constants
-
-# revelation probably also has to become a custom mturk page for it to be skipped
+from otree_mturk_utils.views import CustomMturkPage, CustomMturkWaitPage
 
 class RevelationWaitPage(WaitPage):
     wait_for_all_groups = True
@@ -11,8 +10,8 @@ class RevelationWaitPage(WaitPage):
         pass
 
 
-class Revelation(Page):
-    pass
+class Revelation(CustomMturkPage):
+    timeout_seconds = 20
 
 
 page_sequence = [

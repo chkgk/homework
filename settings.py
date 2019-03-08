@@ -73,3 +73,4 @@ SECRET_KEY = 'f^35@(6l-h1x4*1vppflz$l5op=adf5(eo4&z!)ru8(zsa=42j'
 
 # if an app is included in SESSION_CONFIGS, you don't need to list it here
 INSTALLED_APPS = ['otree']
+EXTENSION_APPS  = ['otree_mturk_utils']

@@ -13,7 +13,7 @@ Your app description
 
 class Constants(BaseConstants):
     name_in_url = 'sn_decisions'
-    players_per_group = None
+    players_per_group = 2
     num_rounds = 1
 
 

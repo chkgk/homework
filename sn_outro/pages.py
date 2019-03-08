@@ -1,13 +1,12 @@
 from otree.api import Currency as c, currency_range
 from ._builtin import Page, WaitPage
 from .models import Constants
+from otree_mturk_utils.views import CustomMturkPage, CustomMturkWaitPage
 
-# these all need to become custom mturk wait pages, except for the dropout one
-
-class Results(Page):
+class Results(CustomMturkPage):
     pass
 
-class Questionnaire(Page):
+class Questionnaire(CustomMturkPage):
     pass
 
 class Dropouts(Page):
