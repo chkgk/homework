@@ -1,0 +1,13 @@
+# To Do List
+- figure out a way to sequentially show group members red player's actions without abusing rounds
+  - maybe move this part to a separate app to reduce number of skipped pages
+  - move from 3 player game to two player game
+- update survey
+  - remove birthplace question
+  - allow more genders and prefer not to tell
+  - fix bug on no input on major + ticked non-student, yet error in from
+- rework instructions for the Netherlands
+- check mobile compatibility, especially of payoff table
+- think about timeouts
+- move to matching by arrival time to be independent of number of people in the room.
+  - this would also automatically handle uneven participant numbers
