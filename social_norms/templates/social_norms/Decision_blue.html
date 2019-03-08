@@ -1,0 +1,30 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+	{% if player.treatment == "public" %}
+	Part I
+	{% elif player.treatment == "private" %}
+	Your Decision
+	{% endif %}
+{% endblock %}
+
+{% block content %}
+
+<p>
+	Your color in the experiment: <strong> {{ player.role }} </strong>
+</p>
+
+<p>
+	Advice formulated by other students: <strong> {{ player.advice }} </strong>
+</p>
+
+<p>&nbsp;</p>
+	
+	{% formfield group.decision_blue %}
+
+	{% include 'social_norms/Table.html' %}
+	
+	{% next_button %}
+
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+	Part II
+{% endblock %}
+
+{% block content %}
+
+<p>
+	{% if player.role == "red" and player.return_group_id == player.round_number %}
+
+		{% if group.return_red_timeout == 1 %}
+			You did not indicate any decision. <br>
+			Therefore the advice of the other students was implemented: <strong>{{ subsession.return_red_decision}}</strong> <br>
+			<p>&nbsp;</p>
+			
+			Please stand up, say your group number and announce that you took no decision.
+			<p>&nbsp;</p>
+			Your group number: <strong> {{ player.round_number }} </strong>
+
+		{% else %}
+			Please stand up, say your group number and announce your decision. 
+			<p>&nbsp;</p>
+			Your group number: <strong> {{ player.round_number }} </strong> <br>
+			Your choice: <strong>{{ subsession.return_red_decision }}</strong>
+
+		{% endif %}
+
+    {% elif player.role != "red" and player.return_group_id == player.round_number %}
+
+		{% if group.return_red_timeout == 1 %}
+			The red player in your group did not indicate any decision. <br>
+			Therefore the advice of the other students was implemented: <strong>{{subsession.return_red_decision}}</strong> <br>
+
+		{% else %}
+			The red player in your group chose option <strong>{{ subsession.return_red_decision }}</strong>.
+
+		{% endif %}
+       
+	{% else %}
+
+		{% if subsession.returns_red_timeout == 1 %}
+			The red player in group {{ player.round_number }} did not make a decision. <br>
+			Therefore, the advice {{ subsession.return_red_decision }} was implemented.
+
+		{% else %}
+			The red player in group {{ player.round_number }} chose option {{ subsession.return_red_decision }}.
+
+		{% endif %}
+
+
+
+	{% endif %}
+</p>
+
+	<p>&nbsp;</p>
+	{% next_button %}
+
+{% endblock %}
